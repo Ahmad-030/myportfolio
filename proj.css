@@ -707,7 +707,7 @@ body {
     background-color: #000;
 }
 
-.home, .about, .services, .projects-container {
+/* .home, .about, .services, .projects-container {
     display: flex;
     flex-wrap: wrap;  /* Allow elements to wrap */
     justify-content: center;  /* Center content */
@@ -721,7 +721,7 @@ img, .home-img img, .about-img img, .service-card, .project-card {
   .service-card {
     width: 100%;  /* Make images responsive */
     max-width: 100%;  /* Prevent overflow */
-}
+} */
 @media (max-width: 768px) {
     .home, .about, .services, .projects-container {
         width: 100%;  /* Ensure sections take up the full width on mobile */
@@ -1168,18 +1168,26 @@ body {
 }
 
 /* Mobile Specific Adjustments */
+/* Mobile Specific Adjustments for Contact Form and Buttons */
 @media (max-width: 768px) {
     /* Ensure the buttons are full-width on mobile */
     .contact-btn.whatsapp, .contact-btn.email {
-        width: 100%;
-        padding: 1rem 2rem;
-        font-size: 1.2rem; /* Larger text for easier interaction */
-        justify-content: center; /* Center the content in the button */
+        width: 100%;  /* Make the buttons full width */
+        padding: 1rem 2rem;  /* Adjust padding for better click area */
+        font-size: 1.2rem;  /* Larger text for easier interaction */
+        justify-content: center; /* Center the content inside the button */
     }
 
-    /* Icon size adjustments for mobile */
+    /* Ensure icons are also adjusted for mobile */
     .contact-btn i {
-        font-size: 1.8rem; /* Larger icons for easier tapping on mobile */
+        font-size: 2.5rem;  /* Larger icons for better tap interaction */
+    }
+
+    /* Optionally, you can make the contact form container full width on mobile */
+    .contact-form-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 2rem; /* Adjust padding for mobile view */
     }
 }
 
