@@ -689,6 +689,63 @@ body {
   transform: scale(1.05);
 }
 
+html, body {
+    overflow-x: hidden;  /* Prevent horizontal overflow */
+}
+
+* {
+    max-width: 100%;  /* Prevent any element from exceeding the screen width */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #fff;
+    background-color: #000;
+}
+
+.home, .about, .services, .projects-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow elements to wrap */
+    justify-content: center;  /* Center content */
+    width: 100%;  /* Ensure sections are full width */
+}
+
+img, .home-img img, .about-img img, .service-card, .project-card {
+    width: 50%;  /* Make images responsive */
+    max-width: 500%;  /* Prevent overflow */
+}
+  .service-card {
+    width: 100%;  /* Make images responsive */
+    max-width: 100%;  /* Prevent overflow */
+}
+@media (max-width: 768px) {
+    .home, .about, .services, .projects-container {
+        width: 100%;  /* Ensure sections take up the full width on mobile */
+    }
+
+    .project-card {
+        width: 80%;  /* Project cards should be full-width on mobile */
+        max-width: 80%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+
 /* Modal Popup */
 .project-modal {
     display: none;
