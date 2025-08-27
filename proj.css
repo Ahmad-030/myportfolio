@@ -305,6 +305,7 @@ body::after {
 }
 
 /* About Section */
+/* About Section */
 .about {
   display: flex;
   align-items: center;
@@ -312,27 +313,76 @@ body::after {
   gap: 3rem;
   padding: 5rem 10%;
   flex-wrap: wrap;
+  background: linear-gradient(135deg, #1c1c1c 0%, #2c2c2c 100%); /* Soft professional gradient */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* Subtle animated overlay for depth */
+.about::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 70%);
+  animation: overlayMove 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes overlayMove {
+  0% { transform: rotate(0deg) translate(0, 0); }
+  100% { transform: rotate(360deg) translate(0, 0); }
+}
+
+/* Keep content above overlay */
+.about-content, .about-img img, .skills, .btn {
+  position: relative;
+  z-index: 2;
+}
+
+/* About Image Styling */
 .about-img img {
   width: 250px;
-  border-radius: 20px;
+  border-radius: 15px;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.about-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Optional subtle gradient for text container */
 .about-content {
   max-width: 600px;
+  z-index: 2;
+  color: #fff;
+  padding: 2rem 2.5rem;
+  background: rgba(30, 30, 30, 0.7); /* dark glass effect */
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  transition: transform 0.5s ease;
 }
 
+/* Headings */
 .about-content h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
+  color: #00bcd4; /* accent color */
+  text-shadow: 0px 2px 8px rgba(0, 188, 212, 0.4);
 }
 
 .about-content h3 {
   font-size: 1.5rem;
-  color: var(--main-color);
+  color: #00bcd4;
   margin-bottom: 1rem;
 }
 
@@ -340,72 +390,42 @@ body::after {
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+  color: #d1d1d1;
 }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-bottom: 1.5rem;
-}
-
+/* Skills Styling */
 .skills span {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
-  position: relative; /* for pseudo-element */
-  overflow: hidden;
-  cursor: default;
-}
-
-/* Pseudo-element for fluid fill effect */
-.skills span::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--main-color); /* blue fill */
-  z-index: 0;
-  transition: all 0.5s ease;
-  border-radius: 20px;
-}
-
-.skills span:hover::before {
-  left: 0;
+  transition: 0.3s ease-in-out;
 }
 
 .skills span:hover {
+  background: #00bcd4;
   color: #fff;
   transform: scale(1.05);
 }
 
-/* Keep text above the pseudo-element */
-.skills span * {
-  position: relative;
-  z-index: 1;
-}
-
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  background: var(--main-color);
+  background: #00bcd4;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
   background: #fff;
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
+  color: #00bcd4;
+  border: 1px solid #00bcd4;
 }
 
 
@@ -515,25 +535,57 @@ body {
 
 .heading {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #00bcd4, #0044ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.8), 0px 0px 20px rgba(0, 188, 212, 0.6);
+  animation: textAnimation 1.5s ease-in-out infinite alternate;
 }
+
 .heading span {
   color: #00aaff;
 }
 
+/* Text animation for heading */
+@keyframes textAnimation {
+  0% {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Underline animation on hover */
+.heading:hover {
+  text-decoration: underline;
+  text-decoration-color: #00aaff;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
+}
+
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* For responsiveness */
   gap: 2rem;
   justify-items: center;
   padding: 2rem;
 }
 
+/* Project Card Styling */
 .project-card {
-  width: 320px;
+  width: 320px;  /* Set width to make sure they stay centered */
   height: 420px;
   perspective: 1000px;
+  display: flex;
+  justify-content: center;  /* Align items in the center */
+  align-items: center;
 }
 
 .card-inner {
@@ -603,6 +655,18 @@ body {
   margin-bottom: 1.5rem;
   color: #ddd;
   overflow: auto;
+}
+
+/* Mobile View Fix */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr; /* Adjust grid for mobile */
+  }
+
+  .project-card {
+    width: 90%;  /* Make the cards smaller on mobile */
+    max-width: 350px; /* Set max width for better look */
+  }
 }
 
 .btn {
@@ -931,40 +995,42 @@ body {
 }
 
 /* Contact Form Section */
-/* Contact Form Section */
 .contact-form-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 6rem 10%;
-    min-height: 100vh;
-    background: #0d7377;
+    min-height: 0vh;
+    max-height: 50vh;
+    background: linear-gradient(135deg, #0d7377 0%, #00bcd4 100%); /* Gradient background */
     color: #fff;
 }
 
 /* Contact Form Container */
 .contact-form-container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 2rem 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.75); /* Darker background for contrast */
+    padding: 3rem 2.5rem;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2);
     text-align: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 550px;
 }
 
 /* Heading */
 .contact-form-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
     color: #00bcd4;
 }
 
 /* Subheading */
 .contact-form-container p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #e0e0e0;
     margin-bottom: 2rem;
+    line-height: 1.5;
 }
 
 /* Contact Buttons Container */
@@ -984,33 +1050,82 @@ body {
     background: #00bcd4;
     color: #fff;
     border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
+    border-radius: 50px; /* Rounded button */
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease-in-out;
     text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    background: #008c9e;
+    box-shadow: 0 6px 18px rgba(0, 188, 212, 0.6);
+}
+
+/* WhatsApp Button */
+/* General button styles for WhatsApp and Email */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 50px; /* Rounded corners */
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+}
+
+.contact-btn i {
+    font-size: 1.5rem; /* Size for the icons */
 }
 
 /* WhatsApp Button */
 .contact-btn.whatsapp {
-    background: #25D366;
+    background: #25D366; /* WhatsApp green */
+    color: #fff;
 }
 
 .contact-btn.whatsapp:hover {
-    background: #128C7E;
+    background: #128C7E; /* Darker green on hover */
     transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
 }
 
 /* Email Button */
 .contact-btn.email {
-    background: #007BFF;
+    background: #007BFF; /* Email blue */
+    color: #fff;
 }
 
 .contact-btn.email:hover {
-    background: #0056b3;
+    background: #0056b3; /* Darker blue on hover */
     transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.5);
 }
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+    /* Ensure the buttons are full-width on mobile */
+    .contact-btn.whatsapp, .contact-btn.email {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1.2rem; /* Larger text for easier interaction */
+        justify-content: center; /* Center the content in the button */
+    }
+
+    /* Icon size adjustments for mobile */
+    .contact-btn i {
+        font-size: 1.8rem; /* Larger icons for easier tapping on mobile */
+    }
+}
+
 
 /* Icon Style */
 .contact-btn i {
@@ -1647,41 +1762,42 @@ body {
 /* Projects Section */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);  /* 3 cards per row */
     gap: 2rem;
     padding: 2rem;
 }
 
 .project-card {
-  width: 320px;
-  height: 420px;
+    width: 420px; /* Ensure cards take full width of each grid column */
+    height: 480px;
 }
 
 .card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
 }
 
 .card-front {
-  background: rgba(0, 170, 255, 0.15);
+    background: rgba(0, 170, 255, 0.15);
 }
 
 .card-back {
-  background: rgba(20, 20, 20, 0.9);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .card-back h3 {
     margin-bottom: 1rem;
     color: #00aaff;
 }
+
 
 /* Modal */
 .project-modal {
@@ -1856,56 +1972,107 @@ footer .footer-container {
 }
 
 /* Default Navbar Styling */
+/* Hide the navbar links on larger screens */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #111;
+    z-index: 100;
+}
+
+.logo {
+    color: #05A8FF;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 100; /* Ensure the logo stays on top */
+}
+
+/* Navbar Styling */
 .navbar {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 10px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar button {
-    padding: 0.5rem 1.5rem;
-    border: 1px solid #05A8FF;
-    background: transparent;
-    color: #05A8FF;
-    border-radius: 5px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.4s ease;
-}
-
-#navbar {
-    display: flex;
-    gap: 1.5rem;
-}
-
-/* On mobile, hide navbar links initially */
+/* Mobile View */
 @media (max-width: 768px) {
-    #navbar {
-        display: none;
-        width: 100%;
-        text-align: center;
+    /* Navbar hidden initially on mobile */
+    .navbar {
+        display: none;  /* Hide navbar links initially */
+        position: absolute;
+        top: 0;
+        right: 0; /* Position navbar on the right */
+        background: #111;
+        width: 250px; /* Set the width for the navbar */
+        height: 100vh; /* Full height of the screen */
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        z-index: 100;
+        transition: all 0.3s ease;
     }
 
-    #navbar.active {
-        display: block;
+    /* Show navbar when active (toggled) */
+    .navbar.active {
+        display: flex;
     }
 
+    /* Show the hamburger menu next to the logo on mobile */
     #menu-icon {
         display: block;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        z-index: 101; /* Ensure the hamburger is in front of the title */
+        margin-left: auto; /* Push the icon to the right */
+    }
+
+    /* Mobile navbar link styling */
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        font-size: 1.2rem;
+        transition: background 0.3s;
+    }
+
+    .navbar a:hover {
+        background: #00bcd4;
+    }
+
+    /* Adjust layout for mobile */
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    /* Ensure the logo stays centered on mobile */
+    .logo {
+        margin-top: 0;
+    }
+
+    /* Mobile button widths (if any) */
+    .navbar button {
+        width: 100%; /* Buttons will span the full width of the navbar on mobile */
     }
 }
 
-/* Hamburger Menu Icon */
-#menu-icon {
-    display: block;
-    cursor: pointer;
-    z-index: 1;
+/* Desktop View */
+@media (min-width: 769px) {
+    /* Hide hamburger icon on desktop */
+    #menu-icon {
+        display: none;
+    }
+
+    /* Display navbar normally (horizontal layout) on desktop */
+    .navbar {
+        display: flex;
+        align-items: center;
+    }
 }

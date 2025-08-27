@@ -33,6 +33,16 @@ const projects = [
             "projects/RAO/4.jpeg"
         ],
         description: "Rao Jewelers is a dedicated jewelry e-commerce app designed to provide customers with a luxurious yet convenient shopping experience. The app features an extensive collection of gold, silver, diamond, and custom-designed jewelry, beautifully showcased with high-quality images and detailed descriptions. Users can easily browse by category, apply filters for style or price, and add favorites to their wishlist for later. With secure payment gateways, order tracking, and personalized recommendations."
+    },
+    {
+        title: "Food Delivery",
+        images: [
+            "projects/food/1.jpeg",
+            "projects/food/2.jpeg",
+            "projects/food/3.jpeg",
+            
+        ],
+        description: "Foodie Express is a sleek and user-friendly food delivery app that brings your favorite meals from a variety of restaurants straight to your door. Whether you're craving pizza, sushi, or something special, Foodie Express offers an easy-to-use platform for fast and efficient food delivery. With a focus on seamless ordering, real-time delivery tracking, and personalized experiences, this app ensures you get your food delivered just the way you like it."
     }
 ];
 
@@ -177,6 +187,40 @@ ScrollReveal().reveal('.reveal', {
     interval: 400
 });
 
+const certImages = document.querySelectorAll('.certification-card img');
+
+certImages.forEach((img) => {
+    img.addEventListener('click', (e) => {
+        const src = e.target.src;
+        const overlay = document.createElement('div');
+        overlay.classList.add('cert-enlarge-overlay');
+
+        const enlargedImage = document.createElement('img');
+        enlargedImage.src = src;
+
+        const closeBtn = document.createElement('div');
+        closeBtn.classList.add('cert-enlarge-close');
+        closeBtn.innerHTML = '&times;'; // Close button content
+
+        closeBtn.addEventListener('click', () => {
+            document.body.removeChild(overlay); // Close the overlay
+        });
+
+        overlay.appendChild(enlargedImage);
+        overlay.appendChild(closeBtn);
+        document.body.appendChild(overlay); // Append overlay to body
+
+        // Show the overlay
+        overlay.style.display = 'flex';
+
+        // Optional: Close the overlay if clicked outside the image
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                document.body.removeChild(overlay);
+            }
+        });
+    });
+});
 // ScrollSpy
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navbar a");
