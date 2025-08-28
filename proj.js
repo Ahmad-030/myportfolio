@@ -43,7 +43,16 @@ const projects = [
             
         ],
         description: "Foodie Express is a sleek and user-friendly food delivery app that brings your favorite meals from a variety of restaurants straight to your door. Whether you're craving pizza, sushi, or something special, Foodie Express offers an easy-to-use platform for fast and efficient food delivery. With a focus on seamless ordering, real-time delivery tracking, and personalized experiences, this app ensures you get your food delivered just the way you like it."
-    }
+    },
+    {
+        title: "My Notes",
+        images: [
+            "projects/notes/1.jpg",
+            
+            
+        ],
+        description: "The Notes App is a simple, intuitive, and powerful tool for organizing and managing your personal notes. Built with Flutter and using MongoDB as the backend, the app ensures seamless synchronization of your notes across devices, offering a smooth experience. It allows users to create, edit, and delete notes with ease, featuring a minimalist interface designed for efficient note-taking. The app also integrates custom database handling, ensuring secure and reliable storage of notes for every user."
+    },
 ];
 
 const modal = document.getElementById("projectModal");

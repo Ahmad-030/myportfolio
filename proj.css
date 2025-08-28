@@ -707,30 +707,55 @@ body {
     background-color: #000;
 }
 
-/* .home, .about, .services, .projects-container {
-    display: flex;
-    flex-wrap: wrap;  /* Allow elements to wrap */
-    justify-content: center;  /* Center content */
-    width: 100%;  /* Ensure sections are full width */
+/* Ensure images are fully responsive */
+img, .home-img img, .about-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Ensure images are centered */
 }
 
-img, .home-img img, .about-img img, .service-card, .project-card {
-    width: 50%;  /* Make images responsive */
-    max-width: 500%;  /* Prevent overflow */
+/* Ensure service card layout */
+.service-card {
+    width: 100%;
+    max-width: 100%;
 }
-  .service-card {
-    width: 100%;  /* Make images responsive */
-    max-width: 100%;  /* Prevent overflow */
-} */
 
+/* Section adjustments for mobile */
 @media (max-width: 768px) {
     .home, .about, .services, .projects-container {
-        width: 100%;  /* Ensure sections take up the full width on mobile */
+        width: 100%;  /* Ensure sections are full width on mobile */
+        padding: 0 10px;  /* Add padding to avoid overflow */
     }
 
     .project-card {
-        width: 80%;  /* Project cards should be full-width on mobile */
-        max-width: 80%;
+        width: 100%;  /* Project cards should take up full width */
+        max-width: 100%;
+        margin-bottom: 20px; /* Add space between cards */
+        padding-right: 10px; /* Add padding on right */
+        display: flex;
+        justify-content: center; /* Center the content */
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center all the project cards */
+        gap: 20px;  /* Space between cards */
+    }
+
+    /* Center images inside the project cards */
+    .project-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding-right: 10px;  /* Add padding on the right */
     }
 
     .navbar {
