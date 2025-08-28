@@ -722,24 +722,27 @@ img, .home-img img, .about-img img {
 }
 
 /* Section adjustments for mobile */
+/* Section adjustments for mobile */
 @media (max-width: 768px) {
     .home, .about, .services, .projects-container {
         width: 100%;  /* Ensure sections are full width on mobile */
-        padding: 0 10px;  /* Add padding to avoid overflow */
+        padding: 0 20px;  /* Add padding to avoid overflow on both sides */
     }
 
     .project-card {
         width: 100%;  /* Project cards should take up full width */
         max-width: 100%;
         margin-bottom: 20px; /* Add space between cards */
-        padding-right: 10px; /* Add padding on right */
+        padding: 0 20px;  /* Add padding on the left and right of the project card */
         display: flex;
         justify-content: center; /* Center the content */
+        box-sizing: border-box;  /* Ensure padding does not affect the width */
     }
 
     .service-card {
         width: 100%;
         max-width: 100%;
+        padding: 0 20px; /* Add padding on the left and right of service cards */
     }
 
     .projects-container {
@@ -755,7 +758,6 @@ img, .home-img img, .about-img img {
         height: auto;
         display: block;
         margin: 0 auto;
-        padding-right: 10px;  /* Add padding on the right */
     }
 
     .navbar {
@@ -771,27 +773,6 @@ img, .home-img img, .about-img img {
     }
 }
 
-
-/* Modal Popup */
-.project-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(6px);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    animation: fadeIn 0.4s ease-in-out;
-}
-
-.project-modal.active {
-    display: flex;
-}
 
 /* Modal Content */
 .modal-content {
