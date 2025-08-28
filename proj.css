@@ -722,6 +722,7 @@ img, .home-img img, .about-img img, .service-card, .project-card {
     width: 100%;  /* Make images responsive */
     max-width: 100%;  /* Prevent overflow */
 } */
+
 @media (max-width: 768px) {
     .home, .about, .services, .projects-container {
         width: 100%;  /* Ensure sections take up the full width on mobile */
