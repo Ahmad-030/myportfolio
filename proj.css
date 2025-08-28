@@ -958,6 +958,7 @@ img, .home-img img, .about-img img {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 600;
+    color: #fffdfd;
 }
 
 .quote-section h2 span {
@@ -1531,7 +1532,7 @@ footer .footer-bottom {
 }
 
 .cert-enlarge-overlay img {
-    max-width: 90vw;
+    max-width: 60vw;
     max-height: 80vh;
     border-radius: 18px;
     box-shadow: 0 8px 48px #00aaff;
@@ -2069,6 +2070,135 @@ footer .footer-container {
     align-items: center;
     gap: 1.5rem;
 }
+/* Container for the letter */
+.letter-container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    transform: translateY(30px); /* Initial position */
+    animation: fadeInUp 1s ease-in-out forwards, popIn 1s ease-out 0.5s; /* Adjusted to ensure visibility */
+    opacity: 1;  /* Ensure opacity is 1 initially */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Letter Heading */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeIn 1.2s ease-in-out 0.5s forwards, slideInFromLeft 1s ease-out 1s; /* Animation with ease-in-out */
+}
+
+/* Letter Image Container */
+.letter-image-container {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 1.2s ease-in-out 0.8s forwards, bounceIn 1s ease-out 1.2s; /* Animation for the image container */
+}
+
+/* Letter Image */
+.letter-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.letter-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 188, 212, 0.5); /* Shadow effect on hover */
+}
+
+/* Hover effect for the container */
+.letter-container:hover {
+    transform: scale(1.02); /* Slight scale effect when hovering over the letter container */
+}
+
+/* For responsive view */
+@media (max-width: 768px) {
+    .letter-container {
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .letter-image {
+        width: 90%;
+    }
+}
+
+/* Keyframe Animations */
+
+/* Fade in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade in + Slide-up effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-in from the left */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pop-in effect for letter container */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bounce effect for image container */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Mobile View */
 @media (max-width: 768px) {
@@ -2148,3 +2278,4 @@ footer .footer-container {
         align-items: center;
     }
 }
+
