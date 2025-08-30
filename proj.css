@@ -2104,7 +2104,7 @@ h2 {
 /* Letter Image */
 .letter-image {
     width: 100%;
-    max-width: 700px;
+    max-width: 430px;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2123,7 +2123,7 @@ h2 {
 /* For responsive view */
 @media (max-width: 768px) {
     .letter-container {
-        width: 95%;
+        width: 90%;
     }
 
     h2 {
