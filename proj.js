@@ -53,6 +53,15 @@ const projects = [
         ],
         description: "The Notes App is a simple, intuitive, and powerful tool for organizing and managing your personal notes. Built with Flutter and using MongoDB as the backend, the app ensures seamless synchronization of your notes across devices, offering a smooth experience. It allows users to create, edit, and delete notes with ease, featuring a minimalist interface designed for efficient note-taking. The app also integrates custom database handling, ensuring secure and reliable storage of notes for every user."
     },
+    {
+        title: "Voice Wave",
+        images: [
+            "projects/voicewave/xyz.jpg",
+            
+            
+        ],
+        description: "The Voice-to-Text App is a modern, user-friendly tool designed for recording, managing, and transcribing audio seamlessly. Built with Flutter and powered by the AssemblyAI API, the app transforms voice recordings into accurate text while maintaining an intuitive flow. Users can record audio with custom titles, play back saved files, and generate instant transcriptions with one click. Featuring JSON-based local persistence, it ensures secure offline storage of recordings and titles. With its clean design and smooth navigation, the app delivers a polished experience, making speech recognition simple and accessible."
+    },
 ];
 
 const modal = document.getElementById("projectModal");
