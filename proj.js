@@ -62,6 +62,14 @@ const projects = [
         ],
         description: "The Voice-to-Text App is a modern, user-friendly tool designed for recording, managing, and transcribing audio seamlessly. Built with Flutter and powered by the AssemblyAI API, the app transforms voice recordings into accurate text while maintaining an intuitive flow. Users can record audio with custom titles, play back saved files, and generate instant transcriptions with one click. Featuring JSON-based local persistence, it ensures secure offline storage of recordings and titles. With its clean design and smooth navigation, the app delivers a polished experience, making speech recognition simple and accessible."
     },
+   {
+    title: "Align Nix",
+    images: [
+        "projects/AlignNix/aa.png"
+    ],
+    description: "Align Nix is a modern reimagining of the timeless Tetris puzzle game — redesigned for today’s players using Flutter. Experience the perfect blend of nostalgia and innovation with smooth controls, elegant UI, and fluid animations. Align colorful blocks, clear rows, and climb the leaderboard as you test your reflexes and spatial skills. Whether you’re chasing high scores or just relaxing with quick rounds, Align Nix delivers endless fun and a sleek, modern feel."
+}
+
 ];
 
 const modal = document.getElementById("projectModal");
