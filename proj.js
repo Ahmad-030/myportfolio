@@ -68,6 +68,13 @@ const projects = [
         "projects/AlignNix/aa.png"
     ],
     description: "Align Nix is a modern reimagining of the timeless Tetris puzzle game — redesigned for today’s players using Flutter. Experience the perfect blend of nostalgia and innovation with smooth controls, elegant UI, and fluid animations. Align colorful blocks, clear rows, and climb the leaderboard as you test your reflexes and spatial skills. Whether you’re chasing high scores or just relaxing with quick rounds, Align Nix delivers endless fun and a sleek, modern feel."
+},
+{
+    title: "Sajdah",
+    images: [
+        "projects/Sajdah/aaa.png"
+    ],
+    description: "Sajdah is a modern Islamic prayer companion app — built with Flutter to help Muslims stay connected to their spiritual routine. Experience intelligent location detection, accurate prayer times powered by the Adhan package, and smart notifications that work seamlessly in the background. Track live countdowns to each prayer, find the Qibla direction with a real-time compass, and customize reminders to fit your schedule. With support for multiple calculation methods, dark/light themes, and a sleek Material Design interface, Sajdah makes maintaining your prayer schedule effortless and beautiful — wherever you are in the world."
 }
 
 ];
