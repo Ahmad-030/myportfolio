@@ -340,3 +340,108 @@ menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
+ let currentIndex = 0;
+    const slides = document.querySelectorAll('.swiper-slide');
+    const wrapper = document.getElementById('recommendationsSwiper');
+    const prevBtn = document.querySelector('.swiper-button-prev');
+    const nextBtn = document.querySelector('.swiper-button-next');
+    const pagination = document.querySelector('.swiper-pagination');
+
+    // Create pagination dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'pagination-dot';
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        pagination.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.pagination-dot');
+
+    function updateSlider() {
+        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Touch/Swipe support
+    let startX = 0;
+    let isDragging = false;
+
+    wrapper.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    });
+
+    wrapper.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+    });
+
+    wrapper.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+        isDragging = false;
+    });
+
+    // Mouse drag support
+    wrapper.addEventListener('mousedown', (e) => {
+        startX = e.clientX;
+        isDragging = true;
+        wrapper.style.cursor = 'grabbing';
+    });
+
+    wrapper.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+    });
+
+    wrapper.addEventListener('mouseup', (e) => {
+        if (!isDragging) return;
+        const endX = e.clientX;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+        isDragging = false;
+        wrapper.style.cursor = 'grab';
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+        isDragging = false;
+        wrapper.style.cursor = 'grab';
+    });
+
+    wrapper.style.cursor = 'grab';
+    

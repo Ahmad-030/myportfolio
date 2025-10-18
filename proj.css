@@ -2278,4 +2278,406 @@ h2 {
         align-items: center;
     }
 }
+.recommendations-section {
+    padding: 6rem 10%;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden;
+}
 
+.recommendations-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 188, 212, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(5, 168, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.recommendations-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.recommendations-header .heading {
+    color: #fff;
+}
+
+.recommendations-header .heading span {
+    color: #00bcd4;
+}
+
+.recommendations-subtitle {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-top: 0.5rem;
+}
+
+/* Swiper Container */
+.swiper-container {
+    position: relative;
+    margin: 0;
+    padding: 2rem 5rem;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Recommendation Card */
+.recommendation-card {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    border-radius: 25px;
+    padding: 0;
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.card-content {
+    padding: 2.5rem;
+}
+
+.recommendation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #00bcd4, #05A8FF, #00bcd4);
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+    z-index: 10;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.recommendation-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 188, 212, 0.6);
+    box-shadow: 0 15px 50px rgba(0, 188, 212, 0.2);
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #00bcd4, #05A8FF) border-box;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.profile-info h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.profile-info p {
+    color: #00bcd4;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Recommendation Text */
+.recommendation-text {
+    position: relative;
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -15px;
+    left: -5px;
+    font-size: 3rem;
+    color: rgba(0, 188, 212, 0.15);
+    line-height: 1;
+}
+
+.recommendation-text p {
+    color: #d1d1d1;
+    line-height: 1.8;
+    font-size: 1rem;
+    padding-left: 2rem;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Card Footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.2rem;
+    gap: 1rem;
+}
+
+.date {
+    color: #888;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.date i {
+    color: #00bcd4;
+    font-size: 1rem;
+}
+
+/* LinkedIn Mini Button */
+.linkedin-mini-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, #0077b5, #00a0dc);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 119, 181, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.linkedin-mini-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.5);
+}
+
+.linkedin-mini-btn i {
+    font-size: 1.2rem;
+}
+
+/* Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 188, 212, 0.2);
+    border: 2px solid rgba(0, 188, 212, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.swiper-button-prev {
+    left: 250px;
+}
+
+.swiper-button-next {
+    right: 250px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: rgba(0, 188, 212, 0.4);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.swiper-button-prev i,
+.swiper-button-next i {
+    font-size: 1.8rem;
+    color: #00bcd4;
+}
+
+/* Pagination Dots */
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.pagination-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 188, 212, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.pagination-dot.active {
+    background: #00bcd4;
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* LinkedIn CTA Button */
+.linkedin-cta {
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #0077b5, #00a0dc);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.linkedin-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+}
+
+.linkedin-btn:hover::before {
+    left: 100%;
+}
+
+.linkedin-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 119, 181, 0.5);
+}
+
+.linkedin-btn i {
+    font-size: 1.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .recommendations-section {
+        padding: 4rem 5%;
+    }
+
+    .swiper-container {
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .recommendation-card {
+        margin: 0 auto;
+    }
+
+    .card-content {
+        padding: 1.8rem;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .profile-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .profile-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .profile-info p {
+        font-size: 0.85rem;
+    }
+
+    .recommendation-text p {
+        font-size: 0.9rem;
+        padding-left: 1.5rem;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 40px;
+        height: 40px;
+        display: none;
+    }
+
+    .swiper-button-prev i,
+    .swiper-button-next i {
+        font-size: 1.5rem;
+    }
+
+    .linkedin-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
