@@ -82,7 +82,15 @@ const projects = [
         "projects/Mytasks/aa.png"
     ],
     description:"My Task is a modern task management companion — built with Flutter to help users stay organized and never miss important deadlines. Experience intelligent notification scheduling with custom alarm sounds, accurate timezone management, and smart reminders that work seamlessly in the background. Track your tasks with visual indicators for overdue and due-soon items, manage everything with intuitive swipe gestures, and stay updated through a native home screen widget. Create tasks with detailed descriptions, set exact due dates and times, and receive reliable alarm-style notifications that demand attention. With support for task filtering (All, Pending, Completed), animated splash screen with particle effects, comprehensive debugging tools, and a sleek Material 3 interface with gradient themes, Advanced Todo App makes maintaining your productivity effortless and beautiful — helping you accomplish more every single day."
+},
+{
+    title: "Spin Wheel",
+    images: [
+        "projects/SpinWheel/aa.png"
+    ],
+    "description": "Spin Wheel is a vibrant and interactive Flutter app that transforms decision-making into a fun and visually engaging experience. Users can create their own spin reels by adding custom text or image options, which are displayed in a sleek, animated list on the home screen. A lively Lottie animation sets the tone, while a built-in Dark/Light mode toggle offers seamless theme customization. Once ready, users can start the reel — a single, colorful slot that spins smoothly through all entries, each with its own neon gradient and glow effect. When the spin stops, the winning result is revealed with elegant fade and bounce animations, and a ‘Spin Again’ option allows re-spinning while automatically excluding previous results for fair play. Designed with clean architecture, responsive layouts, and glassmorphism-inspired visuals, Spin Wheel showcases mastery in Flutter animations, UI design, and theme management — delivering a polished, playful, and modern user experience."
 }
+
 
 ];
 
