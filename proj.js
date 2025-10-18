@@ -445,3 +445,40 @@ menuIcon.addEventListener('click', () => {
 
     wrapper.style.cursor = 'grab';
     
+
+// --- NEW PROJECT TOGGLE LOGIC ---
+const viewMoreBtn = document.getElementById('viewMoreBtn');
+// Selects all project cards that are 7th or later in the list.
+const hiddenProjects = document.querySelectorAll('.projects-container .project-card:nth-child(n+7)');
+
+if (viewMoreBtn) {
+    viewMoreBtn.addEventListener('click', () => {
+        // Use text content check for determining current state
+        const isHidden = viewMoreBtn.textContent.includes('View More');
+
+        if (isHidden) {
+            // Show all hidden projects
+            hiddenProjects.forEach(card => {
+                card.classList.add('visible-project');
+            });
+            viewMoreBtn.innerHTML = 'View Less Projects <i class="bx bx-up-arrow-alt"></i>';
+            viewMoreBtn.classList.add('rotated');
+        } else {
+            // Hide projects starting from the 7th one
+            hiddenProjects.forEach(card => {
+                card.classList.remove('visible-project');
+            });
+            viewMoreBtn.innerHTML = 'View More Projects <i class="bx bx-down-arrow-alt"></i>';
+            viewMoreBtn.classList.remove('rotated');
+            // Optional: Scroll back up to the first hidden project position
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                window.scrollTo({
+                    top: projectsSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+}
+// --- END NEW PROJECT TOGGLE LOGIC ---
