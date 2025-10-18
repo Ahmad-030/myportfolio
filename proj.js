@@ -86,7 +86,7 @@ const projects = [
 {
     title: "Spin Wheel",
     images: [
-        "projects/SpinWheel/aa.png"
+        "projects/SpinWheel/aaa.png"
     ],
     "description": "Spin Wheel is a vibrant and interactive Flutter app that transforms decision-making into a fun and visually engaging experience. Users can create their own spin reels by adding custom text or image options, which are displayed in a sleek, animated list on the home screen. A lively Lottie animation sets the tone, while a built-in Dark/Light mode toggle offers seamless theme customization. Once ready, users can start the reel — a single, colorful slot that spins smoothly through all entries, each with its own neon gradient and glow effect. When the spin stops, the winning result is revealed with elegant fade and bounce animations, and a ‘Spin Again’ option allows re-spinning while automatically excluding previous results for fair play. Designed with clean architecture, responsive layouts, and glassmorphism-inspired visuals, Spin Wheel showcases mastery in Flutter animations, UI design, and theme management — delivering a polished, playful, and modern user experience."
 }
