@@ -75,6 +75,13 @@ const projects = [
         "projects/Sajdah/aaa.png"
     ],
     description: "Sajdah is a modern Islamic prayer companion app — built with Flutter to help Muslims stay connected to their spiritual routine. Experience intelligent location detection, accurate prayer times powered by the Adhan package, and smart notifications that work seamlessly in the background. Track live countdowns to each prayer, find the Qibla direction with a real-time compass, and customize reminders to fit your schedule. With support for multiple calculation methods, dark/light themes, and a sleek Material Design interface, Sajdah makes maintaining your prayer schedule effortless and beautiful — wherever you are in the world."
+},
+{
+    title: "My Task",
+    images: [
+        "projects/Mytasks/aa.png"
+    ],
+    description:"My Task is a modern task management companion — built with Flutter to help users stay organized and never miss important deadlines. Experience intelligent notification scheduling with custom alarm sounds, accurate timezone management, and smart reminders that work seamlessly in the background. Track your tasks with visual indicators for overdue and due-soon items, manage everything with intuitive swipe gestures, and stay updated through a native home screen widget. Create tasks with detailed descriptions, set exact due dates and times, and receive reliable alarm-style notifications that demand attention. With support for task filtering (All, Pending, Completed), animated splash screen with particle effects, comprehensive debugging tools, and a sleek Material 3 interface with gradient themes, Advanced Todo App makes maintaining your productivity effortless and beautiful — helping you accomplish more every single day."
 }
 
 ];
