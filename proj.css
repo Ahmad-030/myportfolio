@@ -3124,14 +3124,14 @@ body::after { animation-direction: reverse; }
 .contact-btn.whatsapp:hover { background: #128C7E; transform: scale(1.05); box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5); }
 .contact-btn.email { background: #007BFF; color: #fff; }
 .contact-btn.email:hover { background: #0056b3; transform: scale(1.05); box-shadow: 0 6px 18px rgba(0, 123, 255, 0.5); }
-/* --- END CONTACT FORM --- */
+
 
 
 /* --- FOOTER & UTILITY --- */
 .footer { background: linear-gradient(to right, #0a0a0a, #111); color: #ccc; padding: 50px 20px 20px; font-size: 14px; position: relative; z-index: 5; }
 .footer-container { display: flex; flex-wrap: wrap; justify-content: center; max-width: 1200px; margin: 0 auto; text-align: center; }
 .back-to-top { position: fixed; bottom: 25px; right: 25px; background-color: #00bcd4; color: #fff; padding: 10px 12px; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 999; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0,188,212,0.4); }
-/* --- END FOOTER & UTILITY --- */
+
 
 
 /* --- RESPONSIVE ADJUSTMENTS (Crucial for Mobile) --- */
@@ -3222,4 +3222,3 @@ body::after { animation-direction: reverse; }
     .contact-btn { width: 100%; }
     .footer-container { flex-direction: column; text-align: center; }
 }
-/* --- END RESPONSIVE ADJUSTMENTS --- */
