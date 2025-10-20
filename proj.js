@@ -293,7 +293,7 @@ window.addEventListener("scroll", () => {
 });
 
 // Typewriter Effect
-const roles = ["Flutter App Developer", "Full Stack Developer"];
+const roles = [ "Full Stack Flutter Developer"];
 let roleIndex = 0;
 let charIndex = 0;
 let currentText = "";
