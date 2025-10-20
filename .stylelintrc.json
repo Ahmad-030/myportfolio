@@ -1,9 +1,0 @@
-{
-  "extends": "stylelint-config-standard",
-  "rules": {
-    "declaration-block-no-duplicate-properties": true,
-    "no-duplicate-selectors": true,
-    "color-no-invalid-hex": true,
-    "block-no-empty": true
-  }
-}
