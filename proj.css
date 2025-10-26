@@ -3868,6 +3868,7 @@ body::after { animation-direction: reverse; }
   cursor: pointer;
   background-color: #1a1a1a; 
 }
+
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 15px 45px rgba(0, 188, 212, 0.4);
@@ -3985,6 +3986,7 @@ body::after { animation-direction: reverse; }
 .modal-content {
     background: rgba(20, 20, 20, 0.95); padding: 2rem; border-radius: 16px; border: 1px solid rgba(5, 168, 255, 0.6); max-width: 950px; max-height: 90vh; width: 100%; color: #f1f1f1; position: relative; box-shadow: 0 12px 30px rgba(0,0,0,0.4); animation: slideUp 0.4s ease; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; overflow-y: auto;
 }
+
 .modal-content h3 { color: #05A8FF; font-size: 2.2rem; text-align: center; font-weight: 700; margin: 0; margin-bottom: 1rem; }
 .modal-content p { margin-top: 1rem; line-height: 1.7; color: #ccc; text-align: center; max-width: 750px; white-space: normal; word-break: break-word; }
 .modal-images { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; padding: 10px; }

@@ -1,4 +1,62 @@
 const projects = [
+ {
+  title: "Blood Donation App",
+  images: [
+    "projects/BloodDonation/bd1.png",
+    "projects/BloodDonation/bd2.png",
+    "projects/BloodDonation/bd3.png"
+  ],
+  description: `
+    The Blood Donation App is a comprehensive Flutter-based platform that bridges the gap 
+    between donors and receivers through real-time communication, smart search filters, 
+    and a location-based hospital locator. 
+
+    Users can register as donors or receivers, post and manage blood requests, chat directly, 
+    and locate nearby hospitals with live distance and contact information. 
+
+    Built with Flutter, Firebase, Provider, and OpenStreetMap, the app features a clean 
+    Material 3 UI, smooth animations, and responsive design — ensuring an intuitive and 
+    impactful user experience that promotes life-saving blood donations.
+  `
+},
+
+    {
+    title: "Spin Wheel",
+    images: [
+        "projects/SpinWheel/aaa.png"
+    ],
+    "description": "Spin Wheel is a vibrant and interactive Flutter app that transforms decision-making into a fun and visually engaging experience. Users can create their own spin reels by adding custom text or image options, which are displayed in a sleek, animated list on the home screen. A lively Lottie animation sets the tone, while a built-in Dark/Light mode toggle offers seamless theme customization. Once ready, users can start the reel — a single, colorful slot that spins smoothly through all entries, each with its own neon gradient and glow effect. When the spin stops, the winning result is revealed with elegant fade and bounce animations, and a ‘Spin Again’ option allows re-spinning while automatically excluding previous results for fair play. Designed with clean architecture, responsive layouts, and glassmorphism-inspired visuals, Spin Wheel showcases mastery in Flutter animations, UI design, and theme management — delivering a polished, playful, and modern user experience."
+},
+{
+    title: "My Task",
+    images: [
+        "projects/Mytasks/aa.png"
+    ],
+    description:"My Task is a modern task management companion — built with Flutter to help users stay organized and never miss important deadlines. Experience intelligent notification scheduling with custom alarm sounds, accurate timezone management, and smart reminders that work seamlessly in the background. Track your tasks with visual indicators for overdue and due-soon items, manage everything with intuitive swipe gestures, and stay updated through a native home screen widget. Create tasks with detailed descriptions, set exact due dates and times, and receive reliable alarm-style notifications that demand attention. With support for task filtering (All, Pending, Completed), animated splash screen with particle effects, comprehensive debugging tools, and a sleek Material 3 interface with gradient themes, Advanced Todo App makes maintaining your productivity effortless and beautiful — helping you accomplish more every single day."
+},
+{
+    title: "Sajdah",
+    images: [
+        "projects/Sajdah/aaa.png"
+    ],
+    description: "Sajdah is a modern Islamic prayer companion app — built with Flutter to help Muslims stay connected to their spiritual routine. Experience intelligent location detection, accurate prayer times powered by the Adhan package, and smart notifications that work seamlessly in the background. Track live countdowns to each prayer, find the Qibla direction with a real-time compass, and customize reminders to fit your schedule. With support for multiple calculation methods, dark/light themes, and a sleek Material Design interface, Sajdah makes maintaining your prayer schedule effortless and beautiful — wherever you are in the world."
+},
+  {
+    title: "Align Nix",
+    images: [
+        "projects/AlignNix/aa.png"
+    ],
+    description: "Align Nix is a modern reimagining of the timeless Tetris puzzle game — redesigned for today’s players using Flutter. Experience the perfect blend of nostalgia and innovation with smooth controls, elegant UI, and fluid animations. Align colorful blocks, clear rows, and climb the leaderboard as you test your reflexes and spatial skills. Whether you’re chasing high scores or just relaxing with quick rounds, Align Nix delivers endless fun and a sleek, modern feel."
+},
+  {
+        title: "Voice Wave",
+        images: [
+            "projects/voicewave/xyz.jpg",
+            
+            
+        ],
+        description: "The Voice-to-Text App is a modern, user-friendly tool designed for recording, managing, and transcribing audio seamlessly. Built with Flutter and powered by the AssemblyAI API, the app transforms voice recordings into accurate text while maintaining an intuitive flow. Users can record audio with custom titles, play back saved files, and generate instant transcriptions with one click. Featuring JSON-based local persistence, it ensures secure offline storage of recordings and titles. With its clean design and smooth navigation, the app delivers a polished experience, making speech recognition simple and accessible."
+    },
     {
         title: "NovelNook",
         images: [
@@ -53,43 +111,11 @@ const projects = [
         ],
         description: "The Notes App is a simple, intuitive, and powerful tool for organizing and managing your personal notes. Built with Flutter and using MongoDB as the backend, the app ensures seamless synchronization of your notes across devices, offering a smooth experience. It allows users to create, edit, and delete notes with ease, featuring a minimalist interface designed for efficient note-taking. The app also integrates custom database handling, ensuring secure and reliable storage of notes for every user."
     },
-    {
-        title: "Voice Wave",
-        images: [
-            "projects/voicewave/xyz.jpg",
-            
-            
-        ],
-        description: "The Voice-to-Text App is a modern, user-friendly tool designed for recording, managing, and transcribing audio seamlessly. Built with Flutter and powered by the AssemblyAI API, the app transforms voice recordings into accurate text while maintaining an intuitive flow. Users can record audio with custom titles, play back saved files, and generate instant transcriptions with one click. Featuring JSON-based local persistence, it ensures secure offline storage of recordings and titles. With its clean design and smooth navigation, the app delivers a polished experience, making speech recognition simple and accessible."
-    },
-   {
-    title: "Align Nix",
-    images: [
-        "projects/AlignNix/aa.png"
-    ],
-    description: "Align Nix is a modern reimagining of the timeless Tetris puzzle game — redesigned for today’s players using Flutter. Experience the perfect blend of nostalgia and innovation with smooth controls, elegant UI, and fluid animations. Align colorful blocks, clear rows, and climb the leaderboard as you test your reflexes and spatial skills. Whether you’re chasing high scores or just relaxing with quick rounds, Align Nix delivers endless fun and a sleek, modern feel."
-},
-{
-    title: "Sajdah",
-    images: [
-        "projects/Sajdah/aaa.png"
-    ],
-    description: "Sajdah is a modern Islamic prayer companion app — built with Flutter to help Muslims stay connected to their spiritual routine. Experience intelligent location detection, accurate prayer times powered by the Adhan package, and smart notifications that work seamlessly in the background. Track live countdowns to each prayer, find the Qibla direction with a real-time compass, and customize reminders to fit your schedule. With support for multiple calculation methods, dark/light themes, and a sleek Material Design interface, Sajdah makes maintaining your prayer schedule effortless and beautiful — wherever you are in the world."
-},
-{
-    title: "My Task",
-    images: [
-        "projects/Mytasks/aa.png"
-    ],
-    description:"My Task is a modern task management companion — built with Flutter to help users stay organized and never miss important deadlines. Experience intelligent notification scheduling with custom alarm sounds, accurate timezone management, and smart reminders that work seamlessly in the background. Track your tasks with visual indicators for overdue and due-soon items, manage everything with intuitive swipe gestures, and stay updated through a native home screen widget. Create tasks with detailed descriptions, set exact due dates and times, and receive reliable alarm-style notifications that demand attention. With support for task filtering (All, Pending, Completed), animated splash screen with particle effects, comprehensive debugging tools, and a sleek Material 3 interface with gradient themes, Advanced Todo App makes maintaining your productivity effortless and beautiful — helping you accomplish more every single day."
-},
-{
-    title: "Spin Wheel",
-    images: [
-        "projects/SpinWheel/aaa.png"
-    ],
-    "description": "Spin Wheel is a vibrant and interactive Flutter app that transforms decision-making into a fun and visually engaging experience. Users can create their own spin reels by adding custom text or image options, which are displayed in a sleek, animated list on the home screen. A lively Lottie animation sets the tone, while a built-in Dark/Light mode toggle offers seamless theme customization. Once ready, users can start the reel — a single, colorful slot that spins smoothly through all entries, each with its own neon gradient and glow effect. When the spin stops, the winning result is revealed with elegant fade and bounce animations, and a ‘Spin Again’ option allows re-spinning while automatically excluding previous results for fair play. Designed with clean architecture, responsive layouts, and glassmorphism-inspired visuals, Spin Wheel showcases mastery in Flutter animations, UI design, and theme management — delivering a polished, playful, and modern user experience."
-}
+  
+ 
+
+
+
 
 
 ];
