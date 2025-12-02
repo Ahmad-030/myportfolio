@@ -1,5 +1,25 @@
 const projects = [
- {
+  {
+  title: "Seed Disease",
+  images: [
+    'projects/seeddisease/geen2.png',
+    'projects/seeddisease/green.png'
+  ],
+  description: `
+    Seed Disease is a comprehensive Flutter-based mobile application that empowers farmers 
+    to detect crop diseases and weeds in real-time, providing actionable treatment recommendations 
+    and secure cloud storage for scan history.
+
+    Users can capture images via camera or gallery, receive instant AI-powered diagnoses, 
+    access fungicide/herbicide guidance, and view preventive measures. The app also supports 
+    bilingual interaction (English / اردو) and offline functionality for rural areas.
+
+    Built with Flutter, TensorFlow Lite, Firebase, and REST APIs, the app features a clean 
+    Material 3 UI, smooth animations, and responsive design — delivering an intuitive, practical, 
+    and impactful user experience that bridges cutting-edge AI technology with grassroots agriculture.
+`
+},
+    {
   title: "Blood Donation App",
   images: [
     "projects/BloodDonation/bd1.png",
